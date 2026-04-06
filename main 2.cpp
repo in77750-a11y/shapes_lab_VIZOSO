@@ -77,12 +77,7 @@ public:
         rec_width = w;
     }
     
-    rectangle(int sqr_L, int sqr_W) : shape("sqaure"){
-        rec_length = sqr_L;
-        rec_width = sqr_W;
-    }
-    
-    
+        
     
     double get_area(){
         
@@ -106,7 +101,7 @@ class square : public rectangle {
     
 public:
     square(int side) : rectangle(side, side) {
-        
+        name = "Square";
     }
         
     void pretty_print(){
@@ -135,12 +130,6 @@ public:
         
     }
     
-    right_triangle(int I_l, int I_w) : shape("Isoceles right triangle"){
-        tri_length = I_l;
-        tri_width = I_w;
-        
-        
-    }
     double get_area(){
         return (tri_length * tri_width) * (0.5);
     }
@@ -164,7 +153,7 @@ public:
     
     Isoceles_right_triangle(int Isoceles_l, int Isoceles_w) : right_triangle(Isoceles_l, Isoceles_w){
         
-        
+        name = "Isoceles Right Triangle";
     }
     
     void pretty_print(){
@@ -195,7 +184,7 @@ int main() {
     cout << endl;
     
     //cout << "Rectangle:" << endl;
-    rectangle r = rectangle(4.0, 5.0);
+    rectangle r = rectangle(4, 5);
     r.pretty_print();
     
     cout << endl;
@@ -203,7 +192,7 @@ int main() {
     cout << endl;
     
    // cout << "Right Triangle:" << endl;
-    right_triangle r_tri = right_triangle(4.0, 5.0);
+    right_triangle r_tri = right_triangle(4, 5);
     r_tri.pretty_print();
     
     cout << endl;
