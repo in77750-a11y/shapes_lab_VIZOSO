@@ -100,7 +100,7 @@ class square : public rectangle {
 
     
 public:
-    square(int side) : rectangle(side, side) {
+    square(double side) : rectangle(side, side) {
         name = "Square";
     }
         
@@ -151,7 +151,7 @@ class Isoceles_right_triangle : public right_triangle {
         
 public:
     
-    Isoceles_right_triangle(int Isoceles_l, int Isoceles_w) : right_triangle(Isoceles_l, Isoceles_w){
+    Isoceles_right_triangle(double Isoceles_l, double Isoceles_w) : right_triangle(Isoceles_l, Isoceles_w){
         
         name = "Isoceles Right Triangle";
     }
